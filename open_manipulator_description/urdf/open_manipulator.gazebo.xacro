@@ -54,11 +54,9 @@
 
   <gazebo>
     <!-- loading plugin: mimic joints works in gazebo now -->
-    <plugin name="gazebo_gripper_ros_control" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
+    <plugin filename="libgazebo_mimic_joint_plugin.so" name="gripper_sub_mimic">
       <joint>gripper</joint>
       <mimicJoint>gripper_sub</mimicJoint>
-      <multiplier>1.0</multiplier>
-      <offset>0.0</offset>
     </plugin>
   </gazebo>
 
