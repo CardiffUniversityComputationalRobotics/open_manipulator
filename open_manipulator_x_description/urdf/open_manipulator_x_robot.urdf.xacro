@@ -12,7 +12,7 @@
   </xacro:if>
 
   <!-- Import Transmission -->
-  <xacro:include filename="$(find open_manipulator_x_description)/urdf/open_manipulator_x.transmission.xacro" />
+  <!-- <xacro:include filename="$(find open_manipulator_x_description)/urdf/open_manipulator_x.transmission.xacro" /> -->
 
   <!-- Import URDF -->
   <xacro:include filename="$(find open_manipulator_x_description)/urdf/open_manipulator_x.urdf.xacro" />
