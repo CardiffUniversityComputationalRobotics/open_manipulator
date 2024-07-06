@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot>
+    <ros2_control name="manipulator" type="system">
+        <hardware>
+            <plugin>open_manipulator_x_hardware/OpenManipulatorXSystem</plugin>
+            <param name="usb_port">/dev/ttyUSB0</param>
+            <param name="baud_rate">1000000</param>
+            <param name="control_period">0.1</param>
+            <param name="manipulator_joint_profile_acceleration">200</param>
+            <param name="manipulator_joint_profile_velocity">500</param>
+            <param name="gripper_joint_profile_acceleration">500</param>
+            <param name="gripper_joint_profile_velocity">1000</param>
+        </hardware>
+
+        <joint name="joint1">
+            <command_interface name="position">
+                <param name="min">-2.356</param>
+                <param name="max">5.934</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+
+        <joint name="joint2">
+            <command_interface name="position">
+                <param name="min">${-pi*0.57}</param>
+                <param name="max">${pi*0.5}</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+        <joint name="joint3">
+            <command_interface name="position">
+                <param name="min">${-pi*0.3}</param>
+                <param name="max">${pi*0.44}</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+        <joint name="joint4">
+            <command_interface name="position">
+                <param name="min">${-pi*0.57}</param>
+                <param name="max">${pi*0.65}</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+        <joint name="gripper">
+            <command_interface name="position">
+                <param name="min">-0.010</param>
+                <param name="max">0.019</param>
+            </command_interface>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+        </joint>
+    </ros2_control>
+</robot>
