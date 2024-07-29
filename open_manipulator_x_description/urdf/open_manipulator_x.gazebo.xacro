@@ -93,6 +93,15 @@
   </ros2_control>
 
   <gazebo>
+
+    <plugin filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so" name="mimic_joint">
+      <joint>gripper</joint>
+      <mimicJoint>gripper_sub</mimicJoint>
+      <multiplier>1.0</multiplier>
+      <offset>0.0</offset>
+      <maxEffort>5.0</maxEffort>
+    </plugin>
+
     <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
       <parameters>$(find open_manipulator_x_moveit_config)/config/ros2_controllers.yaml</parameters>
     </plugin>
