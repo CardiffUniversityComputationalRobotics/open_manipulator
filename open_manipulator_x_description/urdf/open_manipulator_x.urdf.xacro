@@ -238,7 +238,7 @@
 
   <!-- end effector link -->
   <link name="end_effector_link">
-    <visual>
+    <!-- <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <box size="0.01 0.01 0.01" />
@@ -250,7 +250,7 @@
       <origin xyz="0 0 0" />
       <mass value="1.0e-03" />
       <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03" />
-    </inertial>
+    </inertial> -->
   </link>
 
   <!-- Realsense Camera Joint Position -->
